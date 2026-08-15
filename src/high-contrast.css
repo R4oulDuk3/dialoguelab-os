@@ -1,0 +1,180 @@
+/*
+ * Dialogue Lab's high-contrast finish.
+ *
+ * The original UI accumulated many low-contrast lavender-gray text values.
+ * Keep purple as the interaction accent, but render neutral interface copy and
+ * controls with a consistent black ink palette throughout the application.
+ */
+:root {
+  --ink: #050505;
+  --ink-soft: #111111;
+  --line: #c9c9c9;
+  --muted: var(--ink-soft);
+  color: var(--ink);
+  background: #ffffff;
+}
+
+body {
+  color: var(--ink);
+  background: #ffffff;
+}
+
+/* Neutral copy, labels, metadata, controls, and icons use black by default. */
+:where(.app-shell, .onboarding, .modal-backdrop, .audio-progress-backdrop)
+  :where(h1, h2, h3, h4, p, label, small, strong, b, time, a, button, input, textarea, select, svg) {
+  color: var(--ink) !important;
+}
+
+:where(.app-shell, .onboarding, .modal-backdrop, .audio-progress-backdrop)
+  :where(input, textarea)::placeholder {
+  color: #202020;
+  opacity: 1;
+}
+
+/* Secondary text stays visibly subordinate without becoming gray or faint. */
+.nav-label,
+.crumbs span,
+.crumbs b,
+.page-heading p,
+.provider-summary button > span:last-child,
+.voice-card > p,
+.voice-meta,
+.add-card small,
+.character-card > p,
+.character-voice span,
+.background-card-copy p,
+.background-meta,
+.project-card-copy p,
+.project-meta,
+.panel-empty,
+.setup-section > div:first-child span,
+.panel-section-heading span,
+.caption-control,
+.inspector-field,
+.inspector-motion-row label,
+.audio-progress-dialog header p,
+.audio-progress-list p,
+.audio-progress-dialog > footer > span {
+  color: var(--ink-soft) !important;
+}
+
+/* Keep purple focused on active state and primary interaction. */
+.eyebrow,
+.feedback-button,
+.feedback-button svg,
+.provider-summary .manage-link,
+.provider-summary .manage-link svg,
+.sidebar nav a.active,
+.sidebar nav a.active svg,
+.local-card,
+.filter-tabs button.active,
+.text-button,
+.provider-help,
+.add-card > span,
+.empty-library > span,
+.method-card > span,
+.character-dropzone > span,
+.background-dropzone > span,
+.inspector-heading > span,
+.studio-timeline-badge,
+.studio-snap-toggle.active,
+.studio-mode-toggle button.active,
+.caption-presets small,
+.caption-presets button > span em {
+  color: var(--purple) !important;
+}
+
+.line-animation-button,
+.timeline-animation-button,
+.inspector-animation-launch > span {
+  color: var(--purple) !important;
+}
+
+/* Text and icons on filled or deliberately dark surfaces remain white. */
+.new-video,
+.new-video svg,
+.primary-button,
+.primary-button svg,
+.avatar-button,
+.render-video-button,
+.render-video-button svg,
+.play-overlay,
+.play-overlay svg,
+.background-play,
+.background-play svg,
+.duration-pill,
+.project-ratio,
+.project-scenes,
+.canvas-transform-box > span,
+.character-image-preview > span,
+.render-result a,
+.render-result a svg,
+.media-text-add button,
+.media-text-add button svg,
+.offline-font-manager .font-import-button {
+  color: #ffffff !important;
+}
+
+.onboarding-brand,
+.onboarding-brand :where(h1, h2, h3, h4, p, span, small, strong, b, svg) {
+  color: #ffffff !important;
+}
+
+/* Preview-only dark canvases should not inherit interface ink. */
+.editor-preview,
+.editor-preview :where(strong, small, svg),
+.hf-player-shell,
+.caption-live-sample,
+.caption-live-sample :where(span, strong, em),
+.caption-presets button > span,
+.caption-presets button > span :where(strong, em) {
+  color: #ffffff !important;
+}
+
+.caption-presets button > span em {
+  color: var(--purple) !important;
+}
+
+/* Preserve semantic feedback colors. */
+.connected-pill,
+.render-result > div > svg,
+.render-job.complete .render-job-icon,
+.audio-progress-list article.success .audio-task-state,
+.hf-preview-head > span.ready {
+  color: #12633f !important;
+}
+
+.form-error,
+.card-error,
+.field-hint.error,
+.text-button.danger,
+.mini-menu button.danger,
+.render-job.failed .render-job-icon,
+.render-job.cancelled .render-job-icon,
+.audio-progress-list article.error .audio-task-state,
+.audio-progress-list small,
+.asset-recovery-warning,
+.line-asset-warning {
+  color: #8f1629 !important;
+}
+
+.security-warning,
+.activation-note {
+  color: #6b3b00 !important;
+}
+
+/* Separators remain lighter than copy, but are no longer washed out. */
+.sidebar,
+.topbar,
+.voice-card,
+.add-card,
+.character-card,
+.background-card,
+.provider-summary,
+.search-box,
+.modal,
+.provider-connect,
+.project-card,
+.selected-background-card {
+  border-color: var(--line);
+}

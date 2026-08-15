@@ -1,0 +1,14 @@
+interface:
+  display_name: "Dialogue Lab Video"
+  short_description: "Create and render dialogue videos via MCP"
+  default_prompt: "Use $dialoguelab-video to turn this topic into a polished dialogue video."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "dialoguelab"
+      description: "Dialogue Lab project, TTS, media timeline, and render tools"
+      transport: "stdio"
+
+policy:
+  allow_implicit_invocation: true

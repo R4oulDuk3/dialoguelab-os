@@ -1,0 +1,42 @@
+node_modules/
+.next/
+src/hyperframes-studio.generated.css
+.next-production*/
+.next-*/
+
+# Dialogue Lab user data. These paths may contain provider credentials,
+# projects, generated speech, uploaded media, character art, and renders.
+/data/
+/assets/
+/tmp/
+/.venv/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.db-shm
+*.db-wal
+master.key
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Internal visual captures can contain local project data. Publish only
+# deliberately scrubbed documentation images from a separate public folder.
+/docs/ui-references/
+
+.npm-cache/
+.broken-node_modules-*/
+next-env.d.ts
+*.tsbuildinfo
+*.log
+*.tgz
+/release/
+/packages/dialoguelab-mcp/dist/
+/packages/dialoguelab-mcp/resources/
+.DS_Store
+.hf-scaffold/

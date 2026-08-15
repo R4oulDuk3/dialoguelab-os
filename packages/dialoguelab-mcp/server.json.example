@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.OWNER/dialoguelab",
+  "description": "Local-first Dialogue Lab authoring, TTS, subtitles, timeline editing, and HyperFrames rendering over MCP",
+  "repository": {
+    "url": "https://github.com/OWNER/dialoguelab",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "dialoguelab-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "Optional directory shared with a Dialogue Lab installation",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false,
+          "name": "DIALOGUELAB_DATA_DIR"
+        }
+      ]
+    }
+  ]
+}
