@@ -2,6 +2,8 @@
 
 Dialogue Lab currently focuses on character-led Dialogue projects. A supported cloud voice provider is required for speech generation.
 
+> **Highly recommended:** combine the Dialogue Lab app with **Codex** or **Claude Code** through the included MCP server. Use the app for visual review and manual adjustments, and use the agent for project authoring, revisions, synchronized timeline operations, and rendering. See [Set up the MCP server](MCP_SETUP.md).
+
 ## 1. Install the local app
 
 Requirements:
@@ -56,7 +58,9 @@ Create a project, choose its canvas, then:
 
 A Dialogue Clip keeps character visibility, generated speech, and captions synchronized. Flow mode places clips sequentially; Manual mode moves or trims each complete Dialogue Clip as one group.
 
-## 6. Connect the development MCP server
+## 6. Connect the MCP server
+
+For complete published-package, source-checkout, Codex, Claude Code, Windows, macOS, Linux, verification, and troubleshooting instructions, see [Set up the Dialogue Lab MCP server](MCP_SETUP.md).
 
 The web app does not need to be running while MCP edits projects. The app and packaged MCP server now use the same operating-system data directory by default:
 

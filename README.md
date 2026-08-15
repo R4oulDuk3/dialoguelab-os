@@ -2,9 +2,11 @@
 
 A local-first studio for character-led dialogue videos, with shared voice, character, media, and background libraries in the browser UI and MCP server.
 
+> **Highly recommended:** use the Dialogue Lab app together with **Codex** or **Claude Code**. The app provides visual preview and precise manual editing, while the MCP-connected agent can author dialogue, manage synchronized clips, generate speech, revise projects, and start local renders. See [Set up the MCP server](docs/MCP_SETUP.md).
+
 Reddit Story and Text Story formats are experimental and hidden from new-project creation. See the [roadmap](docs/ROADMAP.md).
 
-New here? Follow [Getting started](docs/GETTING_STARTED.md) for provider setup, your first voice and character, a first Dialogue project, and repository-development MCP configuration.
+New here? Follow [Getting started](docs/GETTING_STARTED.md) for provider setup, your first voice and character, and a first Dialogue project. Then follow [Set up the MCP server](docs/MCP_SETUP.md) to connect Codex or Claude Code.
 
 ## Run the app
 

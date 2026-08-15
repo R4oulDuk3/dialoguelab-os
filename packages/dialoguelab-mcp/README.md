@@ -2,6 +2,8 @@
 
 Local-first MCP server for creating Dialogue Lab projects, characters, voices, subtitles, compound dialogue clips, media timelines, and HyperFrames MP4 renders.
 
+> **Highly recommended:** use this MCP server together with the Dialogue Lab app in Codex or Claude Code. The agent handles structured authoring and revision while the app provides visual preview and precise manual control.
+
 ## Requirements
 
 - Node.js 22.13 or newer
